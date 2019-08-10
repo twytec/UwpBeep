@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="UwpBeep.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UwpBeep"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="tbAmplitude" Header="Amplitude" Text="200" HorizontalAlignment="Stretch" />
+        <TextBox x:Name="tbFrequency" Grid.Row="1" Header="Frequency" Text="3000" HorizontalAlignment="Stretch" />
+        <TextBox x:Name="tbDuration" Grid.Row="2" Header="Dauer in millisekunden" Text="250" HorizontalAlignment="Stretch" />
+        <Button x:Name="btnPlay" Content="Play" Grid.Row="3" HorizontalAlignment="Stretch" Click="BtnPlay_Click" />
+
+        <MediaElement x:Name="mp" Grid.Row="4" Visibility="Collapsed" />
+    </Grid>
+</Page>
